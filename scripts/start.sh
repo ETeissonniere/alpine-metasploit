@@ -1,4 +1,3 @@
-echo -e "\e[91mAlpine linux based docker container\e[0m"
 echo -e "\e[96;1mDeveloppSoft \e[94m<developpsoft.github.io>\e[0m"
 
 echo ""
