@@ -3,7 +3,7 @@ FROM alpine:latest
 MAINTAINER DeveloppSoft <developpsoft@gmail.com>
 
 # Install deps
-RUN apk --update add alpine-sdk postgresql postgresql-dev ruby ruby-dev ruby-bigdecimal ruby-irb ruby-rdoc ruby-bundler libpcap-dev git nasm nmap tmux libffi-dev sqlite-dev ncurses-dev ncurses
+RUN apk --update add alpine-sdk postgresql postgresql-dev ruby ruby-dev ruby-bigdecimal ruby-irb ruby-rdoc ruby-bundler libpcap-dev git nasm nmap libffi-dev sqlite-dev ncurses-dev ncurses
 RUN rm -f /var/cache/apk/*
 
 ADD ./metasploit-framework /opt/metasploit
@@ -32,9 +32,6 @@ WORKDIR /opt/metasploit
 
 # DB config
 ADD ./conf/database.yml /opt/metasploit/config/
-
-# tmux configuration file
-ADD ./conf/tmux.conf /root/.tmux.conf
 
 # settings and custom scripts folder
 VOLUME /root/.msf4/
