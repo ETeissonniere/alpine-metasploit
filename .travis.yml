@@ -1,3 +1,9 @@
 sudo: required
+
 services:
   - docker
+
+script:
+  - docker build -t developpsoft/metasploit .
+  - docker run -d developpsoft/metasploit ./msfconsole
+  - docker ps -a
